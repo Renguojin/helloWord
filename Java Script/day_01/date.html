@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  var myDate=new Date();
+  myDate.setFullYear(2008,8,8);
+  function date(){
+    alert("今天的时间是："+Date()+"已经声明的时间是："+myDate);
+    myDate=myDate.setDate(myDate.getDate()+5);
+    //myDate=myDate.setFullYear(myDate.getYear(),myDate.getMonth(),myDate.getDate());
+    alert("在声明的时间里添加5天"+myDate);
+    var status=myDate>Date();
+    alert("和今天的时间做比较的结果是:"+status);
+    window.document.getElementById();
+  }
+  </script>
+  <title>Date object</title>
+</head>
+<body onload="date()">
+
+</body>
+</html>

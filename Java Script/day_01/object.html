@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScriptObject</title>
+<script>
+//全局变量
+var str;
+  function person(name,age,sex){
+    this.name=name;
+    this.age=age;
+    this.sex=sex;
+  }
+ function createPerson(){
+   var yellowPerson=new person("拉不拉卡",24,"man");
+   with(yellowPerson){
+    str="姓名："+name+",年龄："+age+"，性别："+sex;
+    // alert(str);
+   }
+   alert(str);
+ }
+
+ function createPerson2(){
+   var greenPerson = new Object();
+   greenPerson.name="liuliu";
+   //全局变量
+   str2=new String(greenPerson.name);
+
+   //alert(str2);
+   document.write(str2.blink());
+ }
+</script>
+</head>
+<body onload="createPerson()">
+  <button onclick="createPerson2()"  value="2">创建greenPerson</button>
+</body>
+</html>

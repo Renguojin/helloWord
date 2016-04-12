@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery-2.2.3.js"></script>
+  <title>hide</title>
+<script>
+  $(document).ready(function() {
+    $("button").click(function() {
+      var div=$("#txt");
+      alert(div.attr("hidden"));
+      if (div.attr("hidden")) {
+        $("div").hide();
+      }else{
+        $("div").show();
+      }
+
+    });
+  });
+</script>
+</head>
+<body>
+  <div id="txt">点击隐藏</div>
+  <div>点击隐藏1</div>
+  <div>点击隐藏2</div>
+  <button>hide</button>
+</body>
+</html>

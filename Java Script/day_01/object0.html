@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>clock</title>
+<script>
+//window.body.onload=startTime();
+function startTime(){
+  var time=new Date();
+  var h=checkTime(time.getHours());
+  var m=checkTime(time.getMinutes());
+  var s=checkTime(time.getSeconds());
+  document.getElementById("txt").innerHTML=h+":"+m+":"+s;
+  setTimeout('startTime()',500);
+}
+function checkTime(i)
+{
+if (i<10)
+  {i="0" + i}
+  return i
+}
+</script>
+</head>
+<body onload="startTime()">
+  <div id="txt"></div>
+</body>
+</html>

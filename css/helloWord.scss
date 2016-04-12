@@ -1,0 +1,17 @@
+@import url(css/helloWord.css);
+@mixin test{
+  cursor: pointer;
+  width: 0.2rem;
+  height: 0.2rem;
+  line-height: 0.2rem;
+  overflow: visible;
+  display: inline-block;
+  margin-left: 0.1rem;
+  color: rgb(224, 12, 95);
+  background: {
+    repeat: no-repeat;
+    position-x: center;
+    position-y: center;
+    color: rgb(93, 245, 163);
+  }
+}

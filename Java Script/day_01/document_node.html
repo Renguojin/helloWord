@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML DOM</title>
+<script>
+var number=1;
+  function createNode(){
+    //alert("haha");
+    var body=document.getElementById("body");
+    var newBotton = document.createElement("button");
+    //newBotton.onclick="createNode()";
+    //newBotton.appendChild(elem);
+    newBotton.setAttribute('onclick', "createNode()");
+    var text=document.createTextNode("newBotton"+(number++));
+    newBotton.appendChild(text);
+    body.appendChild(newBotton);
+  }
+  window.onload=hello();
+  function hello(){
+    alert("HELLO...");
+  }
+  //event.onload=createNode();
+</script>
+</head>
+<body id="body">
+  <button onclick="createNode()">addNode</button>
+</body>
+</html>
