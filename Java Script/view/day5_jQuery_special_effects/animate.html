@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../../bin/jquery-2.2.3.js"></script>
+
+  <title>动画</title>
+<script>
+$(document).ready(function() {
+  $("#d1").mouseleave(function(event) {
+    $(this).animate({
+      height: '200px',
+      width: '200px',
+      fontSize:'50px'
+    }, "slow");
+  });
+  /*$("#d1").mouseover(function(event) {
+    $(this).animate({
+      height: 'toggle',
+      width: 'toggle',
+      fontSize:'toggle'
+    }, "slow");
+  });*/
+
+  $("#d1").click(function(event) {
+    $(this).animate({
+      height: 'toggle',
+      width: 'toggle',
+      fontSize:'toggle'
+    }, "slow");
+  });
+  $("#d2").mouseover(function(event) {
+    $("#d3").animate({
+      marginLeft: '100px',
+    }, "slow");
+    $("#d4").animate({
+      marginLeft: '300px',
+    }, "slow");
+    $("#d5").animate({
+      marginLeft: '500px',
+    }, "slow");
+  });
+  $("#d2").mouseleave(function(event) {
+    $("#d3").animate({
+      marginLeft: '0px',
+    }, "slow");
+    $("#d4").animate({
+      marginLeft: '0px',
+    }, "slow");
+    $("#d5").animate({
+      marginLeft: '0px',
+    }, "slow");
+  });
+});
+
+</script>
+<style>
+#d1{
+  background-color: green;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  font-size: 10px;
+}
+#d2{
+  
+}
+
+#d3{
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  font-size: 10px;
+}
+#d4{
+  background-color: yellow;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  font-size: 10px;
+}
+#d5{
+  background-color: green;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  font-size: 10px;
+}
+
+</style>
+</head>
+<body>
+  <div id="d1">hello 点我</div>
+  <div id="d2">
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+  </div>
+
+</body>
+</html>

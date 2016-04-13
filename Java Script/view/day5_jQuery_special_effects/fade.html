@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../../bin/jquery-2.2.3.js"></script>
+  <title>淡入，淡出</title>
+<script>
+  $(document).ready(function() {
+    //淡入淡出函数
+    $("#b").click(function() {
+      if ("淡入"==$(this).text()) {
+        $(this).text("淡出");
+        $("div").fadeIn('slow');
+      }else if ("淡出"==$(this).text()) {
+        $(this).text("淡入");
+        $("div").fadeOut('slow');
+      }
+    });
+    $("#b2").click(function() {
+      $("div").fadeToggle('slow');
+    });
+    //透明函数
+    $("#b3").click(function(event) {
+      if("1"!=$("div").css('opacity')){
+        $("div").fadeTo('slow', 1);
+        $(this).text('透明');
+      }else{
+        $("div").fadeTo('slow', 0.05);
+        $(this).text('还原');
+      }
+    });
+
+    $("#b4").click(function(event) {
+      $("div").slideDown('slow', function() {
+
+      });
+    });
+    $("#b5").click(function(event) {
+      $("div").slideUp('slow');
+    });
+    $("#b6").click(function(event) {
+      $("div").slideToggle('slow');
+    });
+  });
+</script>
+<style>
+  div.d1 {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background-color: red;
+  }
+  div.d2 {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background-color: yellow;
+  }
+  div.d3 {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background-color: green;
+  }
+
+</style>
+</head>
+<body>
+  <div class="d1"></div>
+  <div class="d2"></div>
+  <div class="d3"></div>
+  <button id="b">淡出</button>
+  <button id="b2">淡入/淡出</button>
+  <button id="b3">透明</button>
+  <button id="b4">向下滑动</button>
+  <button id="b5">向上滑动</button>
+  <button id="b6">向上/下滑动</button>
+</body>
+</html>
