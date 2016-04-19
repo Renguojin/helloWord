@@ -9,4 +9,17 @@ body{
   background-attachment: fixed ;
   background-position: 2% 5%,right;
   background-size: 50px 50px,5% 10%;
+  background-color:#ffffff;
+}
+#indent{
+  text-indent: 5em;
+  /*缩进可以使用值和百分比，值可以使用负值，这个属性会被继承*/
+}
+.text_one{
+  text-indent: 5em;
+  /*对齐方式*/
+  text-align: left;
+  word-spacing: 20px;
+  letter-spacing: 5px;
+  
 }
