@@ -21,5 +21,6 @@ body{
   text-align: left;
   word-spacing: 20px;
   letter-spacing: 5px;
-  
+  /*首字母大写*/
+  text-transform: capitalize;
 }
